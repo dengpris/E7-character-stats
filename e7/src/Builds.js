@@ -1,14 +1,25 @@
-import { Link } from "react-router-dom";
+import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image'
 
-function Builds() {
+function importAll(r) {
+    let images = {};
+    r.keys().map(item => { images[item.replace('./', '')] = r(item); });
+    return images;
+}
+  
+  const images = importAll(require.context('./img', false, /\.(png|jpe?g|svg)$/));
+  
+function Capitalize(str){
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function Builds({ name }) {
     return (
         <>
+        <Container className='mt-5'>
+        <h2>{Capitalize(name)}</h2>
         {/* Character Stats Image */}
-            <div className="col-lg-4 mb-3">
-                <div className="card">
-                    <img src="#"/>
-                </div>
-            </div>
+            <Image src={images[`${name}_stats.png`]} fluid='True' alt='Rose Stats'/>
         {/* Artifact and EE */}
             <div className="artifact"></div>
             <div className="ee"></div>
@@ -21,6 +32,7 @@ function Builds() {
                 <div className="ring"></div>
                 <div className="boots"></div>
             </div>
+        </Container>
         </>
     )
 }
@@ -28,6 +40,7 @@ function Builds() {
 function BuildsList() {
     return (
         <>
+            <Builds name='rose'/>
         </>
     )
 }

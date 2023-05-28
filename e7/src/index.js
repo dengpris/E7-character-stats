@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Home from './Home';
+import BuildsList from './Builds';
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,7 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { index: true, element: <Home /> },
-      // { path: '/builds', element: <BuildsList />},
+      { path: '/builds', element: <BuildsList />},
     ],
   },
 ])
