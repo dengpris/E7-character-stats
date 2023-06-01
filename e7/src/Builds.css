@@ -1,0 +1,33 @@
+
+.builds-medium-image {
+    max-height: 350px;
+    width: auto;
+}
+
+.builds-large-image {
+    max-height: 500px;
+    width: auto;
+}
+
+.mouseover {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted white;
+}
+
+.mouseover .img{
+    visibility: hidden;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    max-width: 500px;
+    max-height: 500px;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    border-bottom: none;
+}
+
+.mouseover:hover .img {
+    visibility: visible;
+}
