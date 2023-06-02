@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import {LinkContainer} from 'react-router-bootstrap'
 
 function currentPage({ isActive, isPending }) {
     return isActive ? 'current-page' : '';
@@ -12,18 +12,18 @@ function Header() {
         <Navbar bg='dark' variant='dark'>
             <Container>
                 <Nav>
-                    <Navbar.Brand href='#'>
-                        Z
-                    </Navbar.Brand>
-                    <Nav.Link href='builds' className={currentPage}>
-                        Builds
-                    </Nav.Link>
-                    <Nav.Link href='hunts' className={currentPage}>
-                        Hunts
-                    </Nav.Link>
-                    <Nav.Link href='expeditions' className={currentPage}>
-                        Expeditions
-                    </Nav.Link>
+                    <LinkContainer to='/'>
+                        <Navbar.Brand>Z</Navbar.Brand>
+                    </LinkContainer>
+                    <LinkContainer to='/builds'>
+                        <Nav.Link>Builds</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to='/hunts'>
+                        <Nav.Link>Hunts</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to='/expeditions'>
+                        <Nav.Link>Expeditions</Nav.Link>
+                    </LinkContainer>
                 </Nav>
             </Container>
         </Navbar>
