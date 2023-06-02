@@ -7,6 +7,8 @@ import Description from './Builds_Description';
 
 const characters = {
     'rose': 'Rose',
+    'roy' : 'Roy Mustang',
+    'politis': 'Politis',
 }
 
 function importAll(r) {
