@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Home from './Home';
 import BuildsList from './Builds';
+import Hunts from './Hunts';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: '/builds', element: <BuildsList />},
+      { path: '/hunts', element: <Hunts />}
     ],
   },
 ])

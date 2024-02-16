@@ -3,7 +3,7 @@ function Home() {
     return (
         <>
         <div>
-            <p>hello world lmfao</p>
+            <p>hello world</p>
         </div>
         </>
     )
